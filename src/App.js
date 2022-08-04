@@ -1,23 +1,28 @@
-import logo from './logo.svg';
-import './App.css';
+import Form from "./Form";
+import Output from "./Output";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+
+      <header>
+        <h1>
+          Salary Calculator
+        </h1>
       </header>
+      <main>
+        <section>
+          <p>
+            Pick a State the tax amount for the selected state will be added on to the calculation,
+            then enter salary information
+
+          </p>
+        </section>
+        <br />
+
+        <Form />
+        <Output />
+      </main>
     </div>
   );
 }
