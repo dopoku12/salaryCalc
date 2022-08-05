@@ -1,6 +1,7 @@
 import { useState } from "react";
 const Form = () => {
     const [usrInput, setUsrInput] = useState('')
+    const [status, setStatus] = useState(false)
     const inputFields = [
         {
             id: 0,
@@ -42,8 +43,13 @@ const Form = () => {
     function submit(e) {
         e.preventDefault()
         const num = parseInt(usrInput)
-        const Output = num
-        setUsrInput(Output)
+        setUsrInput(num)
+        setStatus(true)
+    }
+
+    function clear() {
+        setStatus(false)
+        setUsrInput('')
     }
 
     // if id dosen't === id on change then add formula
@@ -59,12 +65,15 @@ const Form = () => {
 
                             <br />
                             <input type="number" placeholder={i.placeholder}
+                                required
                                 value={
-                                    usrInput + i.formula
+                                    status ?
+                                        usrInput + i.formula :
+                                        usrInput
                                 }
                                 onChange={(e) => {
 
-                                    setUsrInput(e.target.value)
+                                    status || setUsrInput(e.target.value)
                                 }}
                             />
                             <br /> <br />
@@ -79,7 +88,7 @@ const Form = () => {
                 submit
             </button>
 
-            <button>
+            <button onClick={clear}>
                 Clear
             </button>
         </form>
