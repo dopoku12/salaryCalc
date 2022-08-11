@@ -1,5 +1,5 @@
-import Form from "./Form";
-import Output from "./Output";
+import Input from "./Input";
+import Option from "./Option";
 
 function App() {
   return (
@@ -20,8 +20,8 @@ function App() {
         </section>
         <br />
 
-        <Form />
-        <Output />
+        <Input />
+        <Option />
       </main>
     </div>
   );

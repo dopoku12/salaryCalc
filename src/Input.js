@@ -1,5 +1,5 @@
 import { useState } from "react";
-const Form = () => {
+const Input = () => {
     const [usrInput, setUsrInput] = useState('')
     const [status, setStatus] = useState(false)
     const inputFields = [
@@ -96,4 +96,4 @@ const Form = () => {
     );
 }
 
-export default Form;
+export default Input;
