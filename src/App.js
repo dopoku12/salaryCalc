@@ -1,15 +1,14 @@
 import Input from "./Input";
 import Option from "./Option";
-
 function App() {
   return (
     <div className="App">
-
       <header>
         <h1>
           Salary Calculator
         </h1>
       </header>
+
       <main>
         <section>
           <p>
@@ -23,6 +22,7 @@ function App() {
         <Input />
         <Option />
       </main>
+
     </div>
   );
 }
