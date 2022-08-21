@@ -2,9 +2,9 @@ import useArrObj from "./ArrObj";
 const Option = () => {
     const { usa } = useArrObj()
     return (
-        <select>
+        <select className="states">
             {
-                usa.map(i => <option key={i.keys} value={i.name}></option>)
+                usa.map(i => <option key={i.keys} value={i.name}>{i.name}</option>)
             }
         </select>
     );

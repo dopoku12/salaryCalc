@@ -1,9 +1,13 @@
 import { useState } from "react";
 import useArrObj from "./ArrObj";
 const Input = () => {
+    //states
     const [usrInput, setUsrInput] = useState('')
     const [status, setStatus] = useState(false)
+
+    //custom hook
     const { inputFields } = useArrObj()
+
     function submit(e) {
         e.preventDefault()
         const num = parseInt(usrInput)

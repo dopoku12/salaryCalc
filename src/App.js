@@ -10,17 +10,18 @@ function App() {
       </header>
 
       <main>
-        <section>
+        <article>
           <p>
             Pick a State the tax amount for the selected state will be added on to the calculation,
             then enter salary information
 
           </p>
-        </section>
+        </article>
         <br />
-
-        <Input />
-        <Option />
+        <section>
+          <Option />
+          <Input />
+        </section>
       </main>
 
     </div>
