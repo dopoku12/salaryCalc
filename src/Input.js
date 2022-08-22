@@ -1,12 +1,13 @@
 import { useState } from "react";
 import useArrObj from "./ArrObj";
+import Output from "./Output";
+import { BsArrowLeftRight } from "react-icons/bs";
 const Input = () => {
     //states
     const [usrInput, setUsrInput] = useState('')
     const [status, setStatus] = useState(false)
-
     //custom hook
-    const { inputFields } = useArrObj()
+    const { inputFields, usa } = useArrObj()
 
     function submit(e) {
         e.preventDefault()
@@ -23,45 +24,43 @@ const Input = () => {
     console.log('input:', inputFields);
     // if id dosen't === id on change then add formula
     return (
-        <form onSubmit={submit}>
-            {
-                inputFields.map((i) => {
-                    return (
-                        <li key={i.id}>
-                            <label>
-                                {i.label}
-                            </label>
-
-                            <br />
-                            <input type="number" placeholder={i.placeholder}
-                                required
-                                value={
-                                    status ?
-                                        usrInput + i.formula :
-                                        usrInput
-                                }
-                                onChange={(e) => {
-
-                                    status || setUsrInput(e.target.value)
-                                }}
-                            />
-                            <br /> <br />
-                        </li>
-                    )
+        <div>
+            <select className="states">
+                {
+                    usa.map(i => <option key={i.keys}>{i.name}</option>)
                 }
-                )
-            }
+            </select>
 
+            <form onSubmit={submit}>
+                <label>
+                    input:
+                </label>
+                <br />
+                <select>
+                    {
+                        inputFields.map((i) => {
+                            return (
+
+                                <option key={i.keys} required>{i.label}</option>
+                            )
+
+                        }
+                        )
+                    }
+                </select>
+                <input type="number" placeholder="enter here..."
+                    required
+                    value={usrInput}
+                    onChange={(e) => setUsrInput(e.target.value)}
+                />
+            </form>
 
             <button>
-                submit
+                <BsArrowLeftRight />
             </button>
 
-            <button onClick={clear}>
-                Clear
-            </button>
-        </form>
-
+            <Output clear={clear} usrInput={usrInput} />
+        </div>
     );
 }
 

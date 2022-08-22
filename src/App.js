@@ -1,5 +1,4 @@
 import Input from "./Input";
-import Option from "./Option";
 function App() {
   return (
     <div className="App">
@@ -18,8 +17,18 @@ function App() {
           </p>
         </article>
         <br />
+
+        <article>
+          The federal overtime provisions are contained in the
+          Fair Labor Standards Act (FLSA). Unless exempt,
+          employees covered by the Act must receive overtime pay
+          for hours worked over 40 in a workweek at a rate not
+          less than time and one-half their regular
+          rates of pay.
+          <a href="https://www.dol.gov/agencies/whd/overtime#:~:text=The%20federal%20overtime%20provisions%20are,their%20regular%20rates%20of%20pay." target='_blank'>
+            View here</a>
+        </article>
         <section>
-          <Option />
           <Input />
         </section>
       </main>

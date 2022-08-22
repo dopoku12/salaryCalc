@@ -1,4 +1,5 @@
 const useArrObj = () => {
+
     const inputFields = [
         {
             id: 1,
@@ -25,12 +26,14 @@ const useArrObj = () => {
             formula: 40
         },
         {
+            //
             id: 5,
             label: 'Weekly Pay:',
             placeholder: 'Enter Weekly Pay',
             formula: 40
         },
         {
+            //hourly rate * hours worked
             id: 6,
             label: 'Hourly Pay:',
             placeholder: 'Enter Hourly Pay',
