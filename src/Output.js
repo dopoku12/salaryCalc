@@ -2,39 +2,29 @@ import useArrObj from "./ArrObj";
 const Output = ({ clear, usrInput }) => {
     const { inputFields } = useArrObj()
     return (
-        <div>
-            <form >
-                <label>
-                    Output
-                </label>
-                <select>
-                    {
-                        inputFields.map((i) => {
-                            return (
+        <div className="grid-item3">
+            <label>
+                Output
+            </label>
+            <br />
+            <select>
+                {
+                    inputFields.map(i =>
+                        <option key={i.id} required>{i.label}</option>
+                    )
+                }
+            </select>
 
-                                <option key={i.keys} required>{i.label}</option>
-                            )
+            <br />
+            <input type="number" placeholder="Output here..."
 
-                        }
-                        )
-                    }
-                </select>
-
-                <br />
-                <input type="number" placeholder="enter here..."
-                    value={usrInput}
-                />
-                <br /> <br />
-                <button onClick={clear}>
-                    Clear
-                </button>
-            </form>
-
+                defaultValue={usrInput}
+            />
+            <br /> <br />
+            <button className="clear" onClick={clear}>
+                Clear
+            </button>
         </div>
-
-
-
-
     );
 }
 export default Output;

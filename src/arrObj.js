@@ -39,7 +39,8 @@ const useArrObj = () => {
             placeholder: 'Enter Hourly Pay',
             formula: 10
         },
-    ]
+    ].map(i => Object.assign({ 'status': false }, i))
+
     let num = 1
     const usa = [
         {

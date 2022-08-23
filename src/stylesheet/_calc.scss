@@ -1,0 +1,26 @@
+.grid-container {
+  margin-top: 20px;
+  background-color: palevioletred;
+
+  form {
+    display: grid;
+    // column-gap: 10px;
+    grid-template-columns: repeat(4, auto);
+    padding: 5%;
+
+    .grid-item1 {
+    }
+
+    .grid-item2 {
+      background-color: transparent;
+      border: none;
+      cursor: pointer;
+    }
+
+    .grid-item3 {
+      .clear {
+        cursor: pointer;
+      }
+    }
+  }
+}
