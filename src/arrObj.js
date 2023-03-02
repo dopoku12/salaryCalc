@@ -1,6 +1,13 @@
 const useArrObj = () => {
 
-    const inputFields = [
+    const options = [
+
+        {
+            id: 0,
+            label: '--Choose an option--',
+            placeholder: 'Input here ...',
+            formula: 40
+        },
         {
             id: 1,
             label: 'Annual Pay:',
@@ -282,6 +289,6 @@ const useArrObj = () => {
     ].map(i => Object.assign({ 'keys': num++ }, i))
 
 
-    return { usa, inputFields }
+    return { usa, options }
 }
 export default useArrObj;

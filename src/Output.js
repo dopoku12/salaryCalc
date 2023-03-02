@@ -1,6 +1,6 @@
 import useArrObj from "./ArrObj";
 const Output = ({ clear, usrInput }) => {
-    const { inputFields } = useArrObj()
+    const { options } = useArrObj()
     return (
         <div className="grid-item3">
             <label>
@@ -9,7 +9,7 @@ const Output = ({ clear, usrInput }) => {
             <br />
             <select>
                 {
-                    inputFields.map(i =>
+                    options.map(i =>
                         <option key={i.id} required>{i.label}</option>
                     )
                 }
