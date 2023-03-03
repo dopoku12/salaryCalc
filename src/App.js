@@ -1,5 +1,7 @@
-import Input from "./Input";
+import useFetch from "./hooks/useFetch";
+
 function App() {
+  useFetch()
   return (
     <div className="App">
       <header>
@@ -29,7 +31,7 @@ function App() {
             View here</a>
         </article>
         <section>
-          <Input />
+
         </section>
       </main>
 
